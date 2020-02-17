@@ -1,0 +1,90 @@
+/* ------------GENERAL------------ */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fefee2;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+}
+
+
+/* ------------CONTAINER1------------ */
+
+.container1 {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.container1 h1::before {
+    content: "Before H1";
+    color: red;
+    font-style: italic;
+}
+
+.container1 h1::after {
+    content: "After H1";
+    color: green;
+    font-style: italic;
+}
+
+
+/* ------------CONTAINER2------------ */
+
+.container2 {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+}
+
+.container2 h1 {
+    position: relative;
+    display: inline-block;
+}
+
+.container2 h1::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 5px;
+    left: 0;
+    top: 50%;
+    /* background-color: indigo; */
+    transition: all 0.80s ease-in-out;
+    z-index: -1;
+}
+
+.container2 h1:hover::before {
+    background-color: rebeccapurple;
+    width: 100%;
+}
+
+
+/* ------------CARD------------ */
+
+.card {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid rgba(34, 36, 38, 0.15);
+    box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
+    border-radius: 4px;
+    position: relative;
+    background-color: #fff;
+}
+
+.card::before {
+    content: "";
+    border: 1px solid rgba(34, 36, 38, 0.15);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    transform: rotateZ(1.6deg);
+    z-index: -1;
+    background-color: #fff;
+    box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
+}
